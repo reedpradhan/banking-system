@@ -163,4 +163,4 @@ This project is for learning. Here are the things that are not safe or finished 
 
 ## Author
 
-Made by [Rybes10](https://github.com/Rybes10).
+Made by [Reeddhiman Pradhan](https://github.com/reedpradhan).
