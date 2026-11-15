@@ -1,12 +1,8 @@
 # This file inserts a test account into the accounts table
 import mysql.connector
+from db_config import get_connection
 
-connection = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Rpemon2008@#",  # oh come on, again with the password
-    database="banking_system"
-)
+connection = get_connection()
 
 cursor = connection.cursor()
 

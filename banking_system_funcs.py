@@ -1,5 +1,6 @@
 # The holy grail file to run the banking app and handle user actions
 import mysql.connector
+from db_config import get_connection
 
 from login_stuff import login
 
@@ -14,12 +15,7 @@ def show_menu():
 
 # Show current balance for the logged-in user
 def check_balance(account_number):
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Rpemon2008@#", # for the love of all that is holy, please change this password
-        database="banking_system"
-    )
+    connection = get_connection()
 
     cursor = connection.cursor() # Fetch the balance for the account number
     query = "SELECT balance FROM accounts WHERE account_number = %s" # SQL query to get the balance
@@ -35,12 +31,7 @@ def check_balance(account_number):
 def deposit(account_number):
     amount = float(input("Enter the amount to deposit: "))
 
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Rpemon2008@#", # i will crash out if I see this password one more time
-        database="banking_system"
-    )
+    connection = get_connection()
 
     cursor = connection.cursor()
     query = "UPDATE accounts SET balance = balance + %s WHERE account_number = %s"
@@ -56,12 +47,7 @@ def deposit(account_number):
 def withdraw(account_number):
     amount = float(input("Enter the amount to withdraw: "))
 
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Rpemon2008@#", # sooooo, my laptop is on fire now
-        database="banking_system"
-    )
+    connection = get_connection()
 
     cursor = connection.cursor()
     query = "SELECT balance FROM accounts WHERE account_number = %s"

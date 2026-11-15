@@ -1,14 +1,10 @@
 # Import the MySQL connector module to interact with MySQL from Python
 import mysql.connector
+from db_config import get_connection
 
 try:
     # Attempt to connect to the MySQL database with the given credentials
-    connection = mysql.connector.connect(
-        host="localhost",            # Host where MySQL is running (usually localhost)
-        user="root",                 # Your MySQL username
-        password="Rpemon2008@#",     # Your MySQL password — replace this with your own if needed
-        database="banking_system"    # The database you're connecting to
-    )
+    connection = get_connection()
 
     # If the connection is successful, print a success message
     if connection.is_connected():

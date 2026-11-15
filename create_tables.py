@@ -1,13 +1,9 @@
 # This file basically connects to MySQL and creates the 'accounts' table
 import mysql.connector
+from db_config import get_connection
 
 # Establish connection to MySQL
-connection = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Rpemon2008@#",  # oh no, I hope you don't have to use this password 
-    database="banking_system"
-)
+connection = get_connection()
 
 cursor = connection.cursor()
 
