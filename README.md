@@ -169,5 +169,5 @@ This project is for learning. Here are the things that are not safe or finished 
 
 ## Author
 
-Made by \[Reeddhiman Pradhan](https://github.com/reedpradhan).
+Made by \[Reeddhiman Pradhan] (https://github.com/reedpradhan).
 
